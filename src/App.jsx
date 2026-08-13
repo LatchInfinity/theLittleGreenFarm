@@ -221,7 +221,7 @@ function Header({ isMenuOpen, setIsMenuOpen }) {
 
         <a
           href="#home"
-          className="absolute right-6 top-[58%] flex -translate-y-1/2 justify-end md:left-1/2 md:right-auto md:-translate-x-1/2 md:justify-center"
+          className="absolute left-1/2 top-[58%] flex -translate-x-1/2 -translate-y-1/2 justify-center md:right-auto"
           aria-label="The Little Green Farm"
         >
           <img
@@ -231,10 +231,18 @@ function Header({ isMenuOpen, setIsMenuOpen }) {
           />
         </a>
 
+        <a
+          className="flex h-11 w-11 items-center justify-center justify-self-end text-cream md:hidden"
+          href="tel:+919972709988"
+          aria-label="Call The Little Green Farm"
+        >
+          <Phone size={22} />
+        </a>
+
         <div className="hidden w-[44%] flex-col justify-end py-[10px] md:flex">
           <a className="flex items-center gap-[15px] self-end" href="tel:+919972709988">
             <Phone size={16} className="text-white" />
-            <span className="font-sans text-lg font-light text-white">(+91) 9972709988</span>
+            <span className="font-sans text-lg font-light text-white">(+91) 99727 09988</span>
           </a>
           <div className="mt-[15px] h-px w-full bg-white/30" />
         </div>
@@ -279,10 +287,10 @@ function Hero() {
         <div className="grid items-end gap-10 lg:grid-cols-[1.08fr_0.92fr]">
         <div className="pb-10 md:pb-16">
           <h1 className="font-serif text-[68px] font-extralight leading-[0.95] tracking-[-0.05em] md:text-[120px] lg:text-[140px]">
-            Exhale. <span className="text-cream">Your</span>
+            Breathe. <span className="text-cream">Just</span>
           </h1>
           <p className="font-serif text-[66px] font-extralight leading-none tracking-[-0.05em] text-cream md:text-[116px] lg:text-[140px]">
-            Farm Stay Awaits.
+            Far Enough
           </p>
         </div>
         <p className="mt-8 max-w-[600px] font-sans text-base font-light leading-[1.3] text-white md:text-[18px] md:leading-[1.5]">
@@ -913,7 +921,7 @@ function Footer() {
             <ul className="space-y-4 text-sm font-light text-mist">
               <li className="flex gap-3"><MapPin size={16} className="mt-1 text-cream" /> Jl. Pantai Kuta No. 34, Badung, Bali.</li>
               <li className="flex gap-3"><Mail size={16} className="mt-1 text-cream" /> admin@support.com</li>
-              <li className="flex gap-3"><Phone size={16} className="mt-1 text-cream" />(+91) 9972709988</li>
+              <li className="flex gap-3"><Phone size={16} className="mt-1 text-cream" />(+91) 99727 09988</li>
             </ul>
           </div>
           <div>
