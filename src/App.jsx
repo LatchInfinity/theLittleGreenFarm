@@ -6,7 +6,6 @@ import {
   BedDouble,
   Calendar,
   ChevronLeft,
-  ClipboardPenLine,
   ChevronDown,
   ChevronRight,
   Droplets,
@@ -20,10 +19,14 @@ import {
   Phone,
   Star,
   Tv,
-  Wine,
   X,
 } from 'lucide-react';
 
+import cameraIcon from '../assets/icons/сamera.svg';
+import coconutTreeIcon from '../assets/icons/coconut tree.svg';
+import henIcon from '../assets/icons/Hen.svg';
+import meditation from '../assets/icons/meditation-guru.svg';
+import Soundproofing from '../assets/icons/Soundproofing-09.svg';
 import bookingImage from '../assets/images/BookingImg.png';
 import bookingBgImage from '../assets/images/BookingBgImg.png';
 import blog1Image from '../assets/images/blog1.png';
@@ -91,14 +94,14 @@ const rooms = [
 
 const amenities = [
   { title: ['Private Farmhouse', 'Stay'], icon: BedDouble },
-  { title: ['Meet the Farm', 'Animals'], icon: ClipboardPenLine },
-  { title: ['Sit by the', 'Water'], icon: Wine },
-  { title: ['Green Open', 'Spaces'], icon: Bath },
-  { title: ['Retreats &', 'Workshops'], icon: KeyRound },
+  { title: ['Meet the Farm', 'Animals'], iconImage: henIcon },
+  { title: ['Shoots &', 'Content Days'], iconImage: cameraIcon },
+  { title: ['Green Open', 'Spaces'], iconImage: coconutTreeIcon },
+  { title: ['Retreats &', 'Workshops'], iconImage: meditation },
   { title: ['Family & Friends', 'Getaways'], icon: Headphones },
-  { title: ['Shoots &', 'Content Days'], icon: Droplets },
+  { title: ['Sit by the', 'Water'], icon: Droplets },
   { title: ['In-Room', 'Technology'], icon: Tv },
-  { title: ['Bengaluru, Without', 'the Noise'], icon: ParkingCircle },
+  { title: ['Bengaluru, Without', 'the Noise'], iconImage: Soundproofing },
 ];
 
 const testimonials = [
@@ -303,7 +306,7 @@ function Hero() {
             Far Enough.
           </h1>
           <p className="font-serif text-[66px] font-extralight leading-none tracking-[-0.05em] text-cream md:text-[116px] lg:text-[140px]">
-            Just Breathe
+            Just Breathe.
           </p>
         </div>
         <p className="mt-8 max-w-[600px] font-sans text-base font-light leading-[1.3] text-white md:text-[18px] md:leading-[1.5]">
@@ -677,7 +680,16 @@ function AmenityCard({ amenity }) {
           </span>
         ))}
       </h3>
-      <Icon className="mt-[50px] text-cream transition group-hover:scale-105" size={40} strokeWidth={1.6} />
+      {amenity.iconImage ? (
+        <img
+          className="mt-[50px] h-10 w-10 object-contain transition group-hover:scale-105"
+          src={amenity.iconImage}
+          alt=""
+          aria-hidden="true"
+        />
+      ) : (
+        <Icon className="mt-[50px] text-cream transition group-hover:scale-105" size={40} strokeWidth={1.6} />
+      )}
     </article>
   );
 }
