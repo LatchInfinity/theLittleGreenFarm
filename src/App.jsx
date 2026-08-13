@@ -70,9 +70,9 @@ const navItems = [
 ];
 
 const stats = [
-  { value: 40, suffix: ' m', label: 'From Bengaluru', displayValue: '40' },
-  { value: 1, suffix: ' Farmhouse', label: 'Exclusively yours', displayValue: '1' },
-  { value: 4, suffix: ' Farm Friends', label: 'Goats, ducks, swans & chickens', displayValue: '4' },
+  { value: 40, suffix: ' ', label: 'min from Bengaluru', displayValue: '40' },
+  { value: 20, suffix: ' ', label: 'Guests can be Accommodated', displayValue: '20+' },
+  { value: 50, suffix: ' ', label: ' Farm Friends', displayValue: '50+' },
   { value: 0, suffix: '', label: 'You came looking for', displayValue: 'All the Quiet', compact: true },
 ];
 
@@ -456,12 +456,13 @@ function GalleryImage({ src, alt, landscape = false }) {
 function AboutSection() {
   return (
     <section className="bg-ink pb-24 md:pb-[150px]">
-      <div className="container-shell max-w-[1050px] text-center">
-        <h2 className="mx-auto max-w-4xl font-serif text-[30px] font-light leading-snug tracking-[-0.02em] text-white md:text-[44px]">
+      <div className="container-shell">
+        <div className="mx-auto max-w-[1420px] text-left">
+        <h2 className="max-w-[1320px] font-serif text-[30px] font-light leading-snug tracking-[-0.02em] text-white md:text-[44px]">
           Welcome to <span className="text-cream">The Little Green Farm</span>, a private farmhouse near
           Bangalore where the day slows down naturally.
         </h2>
-        <p className="mx-auto mt-8 max-w-4xl text-base font-light leading-8 text-mist">
+        <p className="mt-8 max-w-[1400px] font-sans text-[24px] font-light leading-[1.65] text-mist md:text-[34px] md:leading-[1.75]">
           Set among trees, open lawns and gentle water, our peaceful space invites you to swap traffic and
           screens for birdsong, breezy sit-outs and unhurried conversation. Spend time with goats, ducks,
           swans and chickens; read by the pond; share a long meal with your people; or simply do very
@@ -469,6 +470,7 @@ function AboutSection() {
           getaways, retreats, workshops and shoots that need more room to breathe.
         </p>
         <PrimaryLink href="#rooms">Explore The Farm</PrimaryLink>
+        </div>
       </div>
     </section>
   );
