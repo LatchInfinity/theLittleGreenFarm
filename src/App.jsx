@@ -923,8 +923,8 @@ function Footer() {
           <div>
             <h3 className="footer-title">Find Us</h3>
             <ul className="space-y-4 text-sm font-light text-mist">
-              <li className="flex gap-3"><MapPin size={16} className="mt-1 text-cream" /> Jl. Pantai Kuta No. 34, Badung, Bali.</li>
-              <li className="flex gap-3"><Mail size={16} className="mt-1 text-cream" /> contact@littlegreenfarm.in</li>
+              <li className="flex gap-3"><MapPin size={16} className="mt-1 text-cream" /> The Little Green Farm, Bangalore, Karnataka 560011</li>
+              <li className="flex gap-3"><Mail size={16} className="mt-1 text-cream" /> contact@thelittlegreenfarm.in</li>
               <li className="flex gap-3"><Phone size={16} className="mt-1 text-cream" />(+91) 99727 09988</li>
             </ul>
           </div>
@@ -936,7 +936,7 @@ function Footer() {
             <div className="overflow-hidden border border-white/10 bg-teal">
               <iframe
                 className="h-[220px] w-full"
-                src="https://www.google.com/maps/embed?pb=!4v1786631447088!6m8!1m7!1ssSd59NwCN9iZwVgerdcmgQ!2m2!1d12.76562819915011!2d77.51488171270452!3f69.19071674662783!4f1.750844618425262!5f0.7820865974627469"
+                src="https://maps.google.com/maps?q=12.76562819915011,77.51488171270452&t=k&z=17&output=embed"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
