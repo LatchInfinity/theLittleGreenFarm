@@ -789,8 +789,8 @@ function OffersSection() {
       <div className="container-shell max-w-[1140px]">
         <div className="mb-[60px] text-center">
           <h2 className="-mt-3 font-serif text-[56px] font-extralight leading-[1.1] tracking-[-0.05em] text-white md:text-[80px]">
-            Make Space for
-            <span className="block">What Matters</span>
+             Escape to the
+            <span className="block">Lap of Nature</span>
           </h2>
         </div>
         <div className="grid gap-[30px] lg:grid-cols-[33fr_67fr]">
@@ -876,7 +876,7 @@ function BookingCta() {
             <div className="mb-[30px] flex items-center gap-5 md:ml-[53px] md:gap-[34px]">
             
               <h3 className="font-serif text-[48px] font-extralight leading-[1.1] tracking-[-0.05em] text-cream md:text-[80px]">
-              Without the Noise.
+                   Without the Noise.
               </h3>
             </div>
             <a
