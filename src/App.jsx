@@ -18,39 +18,45 @@ import {
   Minus,
   ParkingCircle,
   Phone,
-  Send,
   Star,
   Tv,
   Wine,
   X,
 } from 'lucide-react';
 
-import booknowBgImage from '../assets/images/booknowBg.png';
+import bookingImage from '../assets/images/BookingImg.png';
+import bookingBgImage from '../assets/images/BookingBgImg.png';
 import blog1Image from '../assets/images/blog1.png';
-import guestBgImage from '../assets/images/guestBg.jpg';
+import guestBgImage from '../assets/images/guestBg.png';
 import heroImage from '../assets/images/hero.png';
-import hotelBgImage from '../assets/images/hotelBg.jpg';
+import hotelBgImage from '../assets/images/hotelBg.png';
 import logoImage from '../assets/images/logo.png';
-import restaurantBgImage from '../assets/images/restaurenBg.jpg';
-import section2CenterImage from '../assets/images/section2Center.jpg';
-import section2LeftImage from '../assets/images/section2left.jpg';
-import section2RightImage from '../assets/images/section2right.jpg';
-import wellnessBgImage from '../assets/images/wellnessBg.jpg';
+import openAirImage from '../assets/images/openairImg.png';
+import privateBookingImage from '../assets/images/PrivateBookingImg.png';
+import cosyBedroomsImage from '../assets/images/RestEasy.png';
+import retreatBlogImage from '../assets/images/retreatBlog.png';
+import restaurantBgImage from '../assets/images/restaurenBg.png';
+import section2CenterImage from '../assets/images/section2Center.png';
+import section2LeftImage from '../assets/images/section2left.png';
+import section2RightImage from '../assets/images/section2right.png';
+import shootsBlogImage from '../assets/images/shootsBlog.png';
+import slowMorningsImage from '../assets/images/slowmorningsImg.png';
+import wellnessBgImage from '../assets/images/wellnessBg.png';
 
 const assets = {
   hero: heroImage,
   phone: 'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/entypo_old-phone.png',
   gallery: [section2LeftImage, section2CenterImage, section2RightImage],
   rooms: [
-    'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/3d-rendering-soft-and-beautiful-bed-in-luxury-bedr-EAZW68B.webp',
-    'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/3d-rendering-luxury-modern-bedroom-suite-in-hotel-J83FA2Q.webp',
-    'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/3d-rendering-luxury-modern-bedroom-suite-in-hotel-CTLL6EK.webp',
-    'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/3d-rendering-beautiful-luxury-bedroom-suite-in-hot-BDX9GW5.webp',
+    privateBookingImage,
+    cosyBedroomsImage,
+    slowMorningsImage,
+    openAirImage,
   ],
   experiences: [hotelBgImage, restaurantBgImage, wellnessBgImage],
   testimonial: guestBgImage,
-  ctaBg: booknowBgImage,
-  cta: 'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/woman-in-blue-dress-walking-among-tropical-palm-tr-GK4PFV2.webp',
+  ctaBg: bookingBgImage,
+  cta: bookingImage,
 };
 
 const navItems = [
@@ -64,22 +70,22 @@ const navItems = [
 ];
 
 const stats = [
-  { value: 40, suffix: ' min', label: 'From Bengaluru', displayValue: '40' },
+  { value: 40, suffix: ' m', label: 'From Bengaluru', displayValue: '40' },
   { value: 1, suffix: ' Farmhouse', label: 'Exclusively yours', displayValue: '1' },
   { value: 4, suffix: ' Farm Friends', label: 'Goats, ducks, swans & chickens', displayValue: '4' },
   { value: 0, suffix: '', label: 'You came looking for', displayValue: 'All the Quiet', compact: true },
 ];
 
 const experienceTypes = [
-  { title: 'Hotel', image: assets.experiences[0], position: 'center center' },
-  { title: 'Restaurant', image: assets.experiences[1], position: 'center center' },
-  { title: 'Wellness', image: assets.experiences[2], position: 'bottom center' },
+  { title: 'Quiet.', image: assets.experiences[0], position: 'center center' },
+  { title: 'Memorable.', image: assets.experiences[1], position: 'center center' },
+  { title: 'Stays.', image: assets.experiences[2], position: 'bottom center' },
 ];
 
 const rooms = [
-  { name: 'The Main House', price: 'Private Booking', image: assets.rooms[0] },
-  { name: 'Cosy Bedrooms', price: 'Rest Easy', image: assets.rooms[1] },
-  { name: 'The Sit-Outs', price: 'Slow Mornings', image: assets.rooms[2] },
+  { name: 'Premium Bedrooms', price: 'Exquisite', image: assets.rooms[0] },
+  { name: 'Cosy Bedrooms', price: 'Children’s', image: assets.rooms[1] },
+  { name: 'Sit-Outs', price: 'Slow Mornings', image: assets.rooms[2] },
   { name: 'The Farm Outdoors', price: 'Open Air', image: assets.rooms[3] },
 ];
 
@@ -99,7 +105,7 @@ const testimonials = [
   {
     quote:
       'A beautiful break from the city. The quiet, the green and the animals made it feel like a real reset. We left lighter than we arrived.',
-    name: 'Fathi',
+    name: 'Goutham Reddy',
     role: 'Guest review',
   },
 ];
@@ -110,25 +116,23 @@ const offers = [
     title: 'Your Weekend, Your Way',
     description:
       'Take over the farmhouse and settle into a slower kind of plan.',
-    image:
-      'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/luxury-hotel-foyer-with-sofas-tables-and-stylish-PJBXNMJ.webp',
+    image: section2CenterImage,
     featured: true,
   },
   {
     discount: 'For Family & Friends',
     title: 'A Green Getaway',
-    image: 'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/family-photographing-near-swimming-pool-ZXLYLYL.webp',
+    image: openAirImage,
   },
   {
     discount: 'Retreats & Workshops',
     title: 'Bring Us Your Idea',
-    image:
-      'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/young-couple-relaxing-on-the-outdoor-terrace-and-d-QJE95AE.webp',
+    image: retreatBlogImage,
   },
   {
     discount: 'Shoots & Celebrations',
     title: 'A Beautiful Backdrop',
-    image: 'https://thelittlegreenfarm.in/wp-content/uploads/2026/08/female-friends-sitting-at-swimming-pool-HYKL8WX.webp',
+    image: shootsBlogImage,
   },
 ];
 
@@ -287,15 +291,15 @@ function Hero() {
         <div className="grid items-end gap-10 lg:grid-cols-[1.08fr_0.92fr]">
         <div className="pb-10 md:pb-16">
           <h1 className="font-serif text-[68px] font-extralight leading-[0.95] tracking-[-0.05em] md:text-[120px] lg:text-[140px]">
-            Breathe. <span className="text-cream">Just</span>
+            Far Enough.
           </h1>
           <p className="font-serif text-[66px] font-extralight leading-none tracking-[-0.05em] text-cream md:text-[116px] lg:text-[140px]">
-            Far Enough
+            Just Breathe
           </p>
         </div>
         <p className="mt-8 max-w-[600px] font-sans text-base font-light leading-[1.3] text-white md:text-[18px] md:leading-[1.5]">
           Welcome to The Little Green Farm, a private farmhouse stay near Bangalore made for slower days, open
-          skies and easy togetherness. Meet the animals, sit by the water and leave the city noise behind—just
+          skies and easy togetherness. Meet the animals, sit by the water and leave the city noise behind. Just
           far enough away to truly exhale.
         </p>
       </div>
@@ -409,7 +413,7 @@ function ShowcaseGallery() {
     <section className="overflow-hidden bg-ink px-3 py-20 md:px-5 md:py-[150px]" id="about">
       <div className="mx-auto max-w-[1290px]">
         <h2 className="relative z-20 text-left font-serif text-[65px] font-extralight leading-none tracking-[-0.05em] text-white md:ml-[100px] md:text-center md:text-[80px] lg:text-[120px]">
-          The Little Green
+          Experience
         </h2>
 
         <div className="relative z-10 mt-8 grid gap-7 md:-mt-10 md:-mb-20 md:grid-cols-3 md:gap-0">
@@ -425,7 +429,7 @@ function ShowcaseGallery() {
         </div>
 
         <h2 className="relative z-20 mt-8 text-right font-serif text-[65px] font-extralight leading-none tracking-[-0.05em] text-white md:mt-0 md:pr-[100px] md:text-center md:text-[80px] lg:text-[120px]">
-          Farm
+          The Nature
         </h2>
       </div>
     </section>
@@ -521,7 +525,7 @@ function StatsSection() {
     <section className="bg-ink pb-16" ref={statsRef}>
       <div className="container-shell grid gap-8 border-y border-white/10 py-12 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat, index) => (
-          <div className="text-center" key={stat.label}>
+          <div className="flex min-h-[118px] flex-col items-center justify-center text-center" key={stat.label}>
             <div
               className={`font-serif font-extralight leading-none tracking-[-0.05em] text-white ${
                 stat.compact ? 'text-[34px] md:text-[40px]' : 'text-[72px]'
@@ -530,7 +534,7 @@ function StatsSection() {
               {stat.displayValue ?? counts[index]}
               <sup className="text-[34px] text-cream">{stat.suffix}</sup>
             </div>
-            <p className="mt-3 text-sm font-light text-mist">{stat.label}</p>
+            <p className={`${stat.compact ? 'mt-2' : 'mt-3'} text-sm font-light text-mist`}>{stat.label}</p>
           </div>
         ))}
       </div>
@@ -636,8 +640,8 @@ function AmenitiesSection() {
             the simple things.
           </p>
           <h2 className="-mt-3 text-center font-serif text-[58px] font-extralight leading-[1.1] tracking-[-0.05em] text-white md:text-[80px] lg:text-right">
-            Come for the Quiet.
-            <span className="block">Stay for the Little Things</span>
+            Come for the Quiet
+            <span className="block">& The Little Things</span>
           </h2>
         </div>
         <div className="grid gap-[30px] md:grid-cols-3">
@@ -820,7 +824,7 @@ function BookingCta() {
   return (
     <section>
       <div
-        className="relative min-h-[50vh] bg-cover bg-center bg-no-repeat md:min-h-[80vh] md:bg-fixed"
+        className="relative min-h-[50vh] bg-cover bg-[center_30%] bg-no-repeat md:min-h-[80vh] md:bg-fixed"
         style={{ backgroundImage: `url(${assets.ctaBg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-ink to-ink/5" />
@@ -828,7 +832,7 @@ function BookingCta() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1140px] px-6">
         <div className="grid gap-8 md:grid-cols-[38fr_62fr] md:gap-[30px]">
-          <div className="-mt-[150px] md:-mt-[250px] md:pr-[30px]">
+          <div className="-mt-[180px] md:-mt-[290px] md:pr-[30px]">
             <img
               className="aspect-[575/832] w-full object-cover"
               src={assets.cta}
@@ -837,18 +841,18 @@ function BookingCta() {
           </div>
 
           <div className="-mt-[40px] pb-20 md:-mt-[55px] md:mr-[90px] md:flex md:flex-col md:pb-24">
-            <h2 className="mb-[10px] font-serif text-[48px] font-extralight leading-[1.1] tracking-[-0.05em] text-white md:text-[80px]">
-              Bengaluru, But Without
+            <h2 className="mb-[10px] whitespace-nowrap font-serif text-[48px] font-extralight leading-[1.1] tracking-[-0.05em] text-white md:text-[80px]">
+              Bengaluru,
             </h2>
             <div className="mb-[30px] flex items-center gap-5 md:ml-[53px] md:gap-[34px]">
-              <span className="h-[3px] w-16 bg-cream md:w-[150px]" />
-              <h3 className="font-serif text-[48px] font-extralight leading-[1.1] tracking-[-0.05em] text-white md:text-[80px]">
-                the Noise.
+            
+              <h3 className="font-serif text-[48px] font-extralight leading-[1.1] tracking-[-0.05em] text-cream md:text-[80px]">
+              Without the Noise.
               </h3>
             </div>
             <a
               className="inline-flex min-h-[68px] items-center justify-center gap-4 bg-cream px-8 text-sm font-medium uppercase tracking-[0.2em] text-ink transition hover:bg-gold-deep md:min-h-[83px] md:min-w-[310px] md:self-end"
-              href="#contact"
+              href="tel:+919972709988"
             >
               Book Your Farm Stay
               <ArrowRight size={16} />
@@ -920,31 +924,32 @@ function Footer() {
             <h3 className="footer-title">Find Us</h3>
             <ul className="space-y-4 text-sm font-light text-mist">
               <li className="flex gap-3"><MapPin size={16} className="mt-1 text-cream" /> Jl. Pantai Kuta No. 34, Badung, Bali.</li>
-              <li className="flex gap-3"><Mail size={16} className="mt-1 text-cream" /> admin@support.com</li>
+              <li className="flex gap-3"><Mail size={16} className="mt-1 text-cream" /> contact@littlegreenfarm.in</li>
               <li className="flex gap-3"><Phone size={16} className="mt-1 text-cream" />(+91) 99727 09988</li>
             </ul>
           </div>
           <div>
             <h3 className="footer-title">
-              A Little More Green
-              <span className="block">in Your Inbox</span>
+              Find Us
+              <span className="block">on the Map</span>
             </h3>
-            <form className="flex border border-white/10 bg-teal">
-              <input
-                className="min-w-0 flex-1 bg-transparent px-4 py-4 text-sm text-white outline-none placeholder:text-mist"
-                placeholder="Email address"
-                type="email"
+            <div className="overflow-hidden border border-white/10 bg-teal">
+              <iframe
+                className="h-[220px] w-full"
+                src="https://www.google.com/maps/embed?pb=!4v1786631447088!6m8!1m7!1ssSd59NwCN9iZwVgerdcmgQ!2m2!1d12.76562819915011!2d77.51488171270452!3f69.19071674662783!4f1.750844618425262!5f0.7820865974627469"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="The Little Green Farm map"
               />
-              <button className="flex w-14 items-center justify-center bg-cream text-ink" type="button" aria-label="Subscribe">
-                <Send size={18} />
-              </button>
-            </form>
+            </div>
           </div>
         </div>
 
         <div className="mt-24 border-t border-white/15 pt-5 text-center text-xs font-light text-mist md:flex md:items-center md:justify-between md:text-left">
-          <p>Hotel &amp; Resort WordPress Theme. Powered by Gutenverse Blocks Addons.</p>
-          <p>Copyright &copy; 2025. All rights reserved.</p>
+          
+          <p>Copyright &copy; 2026. All rights reserved.</p>
         </div>
       </div>
     </footer>
