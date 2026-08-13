@@ -170,6 +170,7 @@ function App() {
 
 function Header({ isMenuOpen, setIsMenuOpen }) {
   const menuRef = useRef(null);
+  const showMenu = false;
 
   useEffect(() => {
     if (!isMenuOpen) {
@@ -201,27 +202,33 @@ function Header({ isMenuOpen, setIsMenuOpen }) {
     <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-b from-black/70 to-transparent">
       <div className="container-shell relative flex min-h-[92px] items-stretch justify-between">
         <div className="hidden w-[44%] flex-col justify-end py-[10px] md:flex">
-          <button
-            className="flex items-center gap-4 self-start font-serif text-base font-extralight uppercase tracking-[0.1em] text-white transition hover:text-cream"
-            type="button"
-            aria-expanded={isMenuOpen}
-            onClick={() => setIsMenuOpen((open) => !open)}
-          >
-            {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
-            Menu
-          </button>
+          {showMenu && (
+            <button
+              className="flex items-center gap-4 self-start font-serif text-base font-extralight uppercase tracking-[0.1em] text-white transition hover:text-cream"
+              type="button"
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen((open) => !open)}
+            >
+              {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
+              Menu
+            </button>
+          )}
           <div className="mt-[15px] h-px w-full bg-white/30" />
         </div>
 
-        <button
-          className="flex h-11 w-11 items-center justify-center text-cream md:hidden"
-          type="button"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isMenuOpen}
-          onClick={() => setIsMenuOpen((open) => !open)}
-        >
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {showMenu ? (
+          <button
+            className="flex h-11 w-11 items-center justify-center text-cream md:hidden"
+            type="button"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        ) : (
+          <div className="h-11 w-11 md:hidden" aria-hidden="true" />
+        )}
 
         <a
           href="#home"
@@ -252,27 +259,29 @@ function Header({ isMenuOpen, setIsMenuOpen }) {
         </div>
       </div>
 
-      <nav
-        ref={menuRef}
-        className={`absolute left-6 right-6 top-full mt-3 max-w-[320px] border border-white/10 bg-ink/95 p-4 shadow-glow backdrop-blur md:left-8 md:right-auto md:w-[280px] ${
-          isMenuOpen ? 'block' : 'hidden'
-        }`}
-        aria-label="Primary navigation"
-      >
-        <ul className="space-y-2">
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <a
-                className="block font-serif text-[26px] font-light leading-tight text-white transition hover:text-cream md:text-[30px]"
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {showMenu && (
+        <nav
+          ref={menuRef}
+          className={`absolute left-6 right-6 top-full mt-3 max-w-[320px] border border-white/10 bg-ink/95 p-4 shadow-glow backdrop-blur md:left-8 md:right-auto md:w-[280px] ${
+            isMenuOpen ? 'block' : 'hidden'
+          }`}
+          aria-label="Primary navigation"
+        >
+          <ul className="space-y-2">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  className="block font-serif text-[26px] font-light leading-tight text-white transition hover:text-cream md:text-[30px]"
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
