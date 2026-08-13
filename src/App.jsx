@@ -311,7 +311,7 @@ function Hero() {
             Far Enough.
           </h1>
           <p className="font-serif text-[66px] font-extralight leading-none tracking-[-0.05em] text-cream md:text-[116px] lg:text-[140px]">
-            Just Breathe.
+            To Just Breathe.
           </p>
         </div>
         <p className="mt-8 max-w-[600px] font-sans text-base font-light leading-[1.3] text-white md:text-[18px] md:leading-[1.5]">
