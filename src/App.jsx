@@ -140,6 +140,7 @@ const offers = [
     discount: 'Shoots & Celebrations',
     title: 'A Beautiful Backdrop',
     image: shootsBlogImage,
+    mobileClassName: 'shoots-mobile-bg',
   },
 ];
 
@@ -813,12 +814,16 @@ function OffersSection() {
 }
 
 function OfferCard({ offer, featured = false, wide = false }) {
+  const cardStyle = {
+    backgroundImage: `url(${offer.image})`,
+  };
+
   return (
     <article
       className={`group relative flex overflow-hidden bg-cover bg-center ${
         featured ? 'min-h-[620px] lg:min-h-[690px]' : wide ? 'min-h-[290px]' : 'min-h-[320px]'
-      }`}
-      style={{ backgroundImage: `url(${offer.image})` }}
+      } ${offer.mobileClassName ?? ''}`}
+      style={cardStyle}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-[#04151a00] to-[#04151a]" />
       <div
@@ -861,9 +866,9 @@ function BookingCta() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1140px] px-6">
         <div className="grid gap-8 md:grid-cols-[38fr_62fr] md:gap-[30px]">
-          <div className="-mt-[180px] md:-mt-[290px] md:pr-[30px]">
+          <div className="-mt-[110px] md:-mt-[290px] md:pr-[30px]">
             <img
-              className="aspect-[575/832] w-full object-cover"
+              className="aspect-[4/3] w-full object-cover md:aspect-[575/832]"
               src={assets.cta}
               alt="Guest walking among tropical palms"
             />

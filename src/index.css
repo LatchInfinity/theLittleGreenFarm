@@ -59,4 +59,16 @@
   .footer-title {
     @apply mb-5 font-serif text-2xl font-light text-white;
   }
+
+  .shoots-mobile-bg {
+    background-size: auto 100%;
+    background-position: 30% center;
+  }
+
+  @media (min-width: 768px) {
+    .shoots-mobile-bg {
+      background-size: cover;
+      background-position: center;
+    }
+  }
 }
