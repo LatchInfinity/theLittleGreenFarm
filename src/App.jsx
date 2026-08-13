@@ -23,8 +23,12 @@ import {
 } from 'lucide-react';
 
 import cameraIcon from '../assets/icons/сamera.svg';
-import coconutTreeIcon from '../assets/icons/coconut tree.svg';
+import familyIcon from '../assets/icons/family.svg';
+import parkIcon from '../assets/icons/carparking.svg';
 import henIcon from '../assets/icons/Hen.svg';
+import poolIcon from '../assets/icons/WATERPOOL.svg';
+import wifi from '../assets/icons/wifi.svg';
+import petIcon from '../assets/icons/pet.svg';
 import meditation from '../assets/icons/meditation-guru.svg';
 import Soundproofing from '../assets/icons/Soundproofing-09.svg';
 import bookingImage from '../assets/images/BookingImg.png';
@@ -93,15 +97,15 @@ const rooms = [
 ];
 
 const amenities = [
-  { title: ['Private Farmhouse', 'Stay'], icon: BedDouble },
+  { title: ['Parking', 'Available'], iconImage: parkIcon },
   { title: ['Meet the Farm', 'Animals'], iconImage: henIcon },
-  { title: ['Shoots &', 'Content Days'], iconImage: cameraIcon },
-  { title: ['Green Open', 'Spaces'], iconImage: coconutTreeIcon },
+  { title: ['Shoots &', 'Events'], iconImage: cameraIcon },
+  { title: ['Pet', 'Friendly'], iconImage: petIcon },
   { title: ['Retreats &', 'Workshops'], iconImage: meditation },
-  { title: ['Family & Friends', 'Getaways'], icon: Headphones },
-  { title: ['Sit by the', 'Water'], icon: Droplets },
-  { title: ['In-Room', 'Technology'], icon: Tv },
-  { title: ['Bengaluru, Without', 'the Noise'], iconImage: Soundproofing },
+  { title: ['Family & Friends', 'Getaways'], iconImage: familyIcon },
+  { title: ['Private Swimming', 'Pool'], iconImage: poolIcon },
+  { title: ['Wi-Fi', 'Available'], iconImage: wifi },
+  { title: ['Farm Cooked', 'Meals'], iconImage: Soundproofing },
 ];
 
 const testimonials = [
@@ -467,7 +471,7 @@ function AboutSection() {
         </h2>
         <p className="mt-8 max-w-[1400px] font-sans text-[24px] font-light leading-[1.65] text-mist md:text-[34px] md:leading-[1.75]">
           Set among trees, open lawns and gentle water, our peaceful space invites you to swap traffic and
-          screens for birdsong, breezy sit-outs and unhurried conversation. Spend time with goats, ducks,
+          screens for birdsong, breezy sit-outs and unhurried conversation. Spend time with goats, ducks, love birds,
           swans and chickens; read by the pond; share a long meal with your people; or simply do very
           little, very well. Just 40 minutes from Bengaluru, the farm is made for family weekends, friend
           getaways, retreats, workshops and shoots that need more room to breathe.
