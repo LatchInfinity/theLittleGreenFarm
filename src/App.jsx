@@ -92,8 +92,8 @@ const experienceTypes = [
 const rooms = [
   { name: 'Premium Bedrooms', price: 'Exquisite', image: assets.rooms[0] },
   { name: 'Cosy Bedrooms', price: 'Children’s', image: assets.rooms[1] },
-  { name: 'Sit-Outs', price: 'Slow Mornings', image: assets.rooms[2] },
-  { name: 'The Farm Outdoors', price: 'Open Air', image: assets.rooms[3] },
+  { name: 'Sit-Outs', price: 'Slow Morning', image: assets.rooms[2] },
+  { name: 'Garden Pavilion', price: 'Open Air', image: assets.rooms[3] },
 ];
 
 const amenities = [
@@ -631,15 +631,17 @@ function RoomCard({ room }) {
           alt={room.name}
         />
       </div>
-      <div className="relative z-10 mx-auto -mt-[50px] h-20 overflow-hidden bg-transparent pt-2.5 text-left transition-all duration-500 group-hover:h-[170px]">
-        <h3 className="mb-[5px] mt-2.5 text-sm font-medium text-cream">{room.price}</h3>
-        <p className="font-serif text-2xl font-light leading-[1.4] tracking-[-0.02em] text-white opacity-0 transition duration-500 group-hover:opacity-100">
+      <div className="relative z-10 mx-auto h-[120px] overflow-hidden bg-transparent pt-5 text-left">
+        <h3 className="mb-2 text-sm font-medium uppercase tracking-[0.18em] text-cream">{room.price}</h3>
+        <p className="font-serif text-2xl font-light leading-[1.4] tracking-[-0.02em] text-white">
           {room.name}
         </p>
+        {/* Hidden for now; remove `hidden` and add `flex` to reuse the room-card action. */}
         <a
-          className="mt-[25px] flex h-12 w-12 items-center justify-center rounded-full bg-cream text-ink opacity-0 transition duration-500 hover:bg-gold-deep group-hover:opacity-100"
+          className="hidden mt-[25px] h-12 w-12 items-center justify-center rounded-full bg-cream text-ink transition duration-500 hover:bg-gold-deep"
           href="#contact"
           aria-label={`Book ${room.name}`}
+          tabIndex={-1}
         >
           <ArrowUpRight size={20} />
         </a>
