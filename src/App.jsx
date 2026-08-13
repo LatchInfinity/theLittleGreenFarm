@@ -232,9 +232,9 @@ function Header({ isMenuOpen, setIsMenuOpen }) {
         </a>
 
         <div className="hidden w-[44%] flex-col justify-end py-[10px] md:flex">
-          <a className="flex items-center gap-[15px] self-end" href="tel:+628152254239">
+          <a className="flex items-center gap-[15px] self-end" href="tel:+919972709988">
             <Phone size={16} className="text-white" />
-            <span className="font-sans text-lg font-light text-white">(+62) 8152 254 239</span>
+            <span className="font-sans text-lg font-light text-white">(+91) 9972709988</span>
           </a>
           <div className="mt-[15px] h-px w-full bg-white/30" />
         </div>
@@ -279,10 +279,9 @@ function Hero() {
         <div className="grid items-end gap-10 lg:grid-cols-[1.08fr_0.92fr]">
         <div className="pb-10 md:pb-16">
           <h1 className="font-serif text-[68px] font-extralight leading-[0.95] tracking-[-0.05em] md:text-[120px] lg:text-[140px]">
-            Exhale. Your
+            Exhale. <span className="text-cream">Your</span>
           </h1>
-          <p className="flex items-center gap-[20px] font-serif text-[66px] font-extralight leading-none tracking-[-0.05em] text-cream md:text-[116px] lg:text-[140px]">
-            <span className="h-[3px] w-[100px] shrink-0 bg-cream" />
+          <p className="font-serif text-[66px] font-extralight leading-none tracking-[-0.05em] text-cream md:text-[116px] lg:text-[140px]">
             Farm Stay Awaits.
           </p>
         </div>
@@ -914,7 +913,7 @@ function Footer() {
             <ul className="space-y-4 text-sm font-light text-mist">
               <li className="flex gap-3"><MapPin size={16} className="mt-1 text-cream" /> Jl. Pantai Kuta No. 34, Badung, Bali.</li>
               <li className="flex gap-3"><Mail size={16} className="mt-1 text-cream" /> admin@support.com</li>
-              <li className="flex gap-3"><Phone size={16} className="mt-1 text-cream" /> +62 21 2345 6789</li>
+              <li className="flex gap-3"><Phone size={16} className="mt-1 text-cream" />(+91) 9972709988</li>
             </ul>
           </div>
           <div>
